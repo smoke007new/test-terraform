@@ -1,5 +1,12 @@
 terraform {
 
+    backend "s3" {
+    bucket = "uran-temp-terraform-states"
+    encrypt = true
+    key    = "aws/terraform-states/terraform.tfstate"
+    region = "eu-central-1"
+  }
+
   required_version = ">= 0.14"
 
   required_providers {
