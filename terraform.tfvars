@@ -1,0 +1,11 @@
+environment            = "terraform-giddyup"
+region                 = "us-west-1"
+cidr_block             = "10.0.0.0/16"
+enable_nat_gateway     = true
+single_nat_gateway     = true
+one_nat_gateway_per_az = false
+enable_vpn_gateway     = false
+acceptor_vpc           = false
+container_name         = "container-terraform-giddyup"
+container_port         = 8080 # ! Must be same port from our Dockerfile that we EXPOSE
+example                = "ecs-terraform-giddyup"
